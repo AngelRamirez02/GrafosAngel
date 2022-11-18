@@ -61,7 +61,14 @@ switch(opc){
 		l.creararco(11,8,15);
 	break;
 	case 2:
-	do{system("cls");cout<<"\nMENU:\n1- Nuevo Vertice\n2- Crear Arco\n\nIngrse la opcion: ";cin>>opc2;}while(opc2<1||opc>2);
+		char opc2User[10];
+	do{system("cls");
+	do{
+		cout<<"\nMENU:\n1- Nuevo Vertice\n2- Crear Arco\n\nIngrse la opcion: ";
+		cin>>opc2User;
+	}while(!validaNum(opc2User));
+	opc2 = atoi(opc2User);
+	}while(opc2<1||opc>2);
 		switch(opc2){
 		case 1:system("cls");
 			char verticeUser[100], contUser[100];
